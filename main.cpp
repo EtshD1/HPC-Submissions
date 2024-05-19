@@ -2,6 +2,7 @@
 #include "./Lab_2/calcPi.hpp"
 #include "./Lab_3/parallelArraySearch.hpp"
 #include "./Lab_5/cirticalSum.hpp"
+#include "./Assignment_1/arraySorting.hpp"
 
 int main() {
     // Lab 2
@@ -11,6 +12,8 @@ int main() {
     // Lab 4
     // parallelArraySearch();
     // Lab 5
-    criticalSum();
+    //criticalSum();
+    // Assignment 1
+    sortArray();
     return 0;
 }
