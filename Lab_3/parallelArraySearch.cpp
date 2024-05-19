@@ -12,22 +12,21 @@ using namespace std;
 #define N 10000
 
 void parallelArraySearch(){
-    clock_t start_time = clock();
-    
     int a[N];
     
     int count = 0;
     
-    for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++)
         a[i] = rand() % 50;
-    }
+        
+    clock_t start_time = clock(); // Start Timer
     
-#pragma omp parallel for schedule(dynamic, 5)
+#pragma omp parallel for schedule(dynamic, 5) // Dynamic Scheduling
     for (int i = 0; i < N; i++)
             if (a[i] < 25)
                 count++;
     
-    clock_t end_time = clock();
+    clock_t end_time = clock(); // End Timer
     
     double execution_time = static_cast<double>(end_time - start_time) / CLOCKS_PER_SEC;
     
