@@ -4,10 +4,10 @@
 
 int main() {
     // Lab 1
-    searchArray();
+    // searchArray();
     // Lab 2
     calculatePi();
     // Lab 3
-    parallelArraySearch();
+    // parallelArraySearch();
     return 0;
 }

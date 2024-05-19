@@ -31,10 +31,12 @@ void calculatePi() {
         }
     }
     
-    std::cout << nInside << std::endl;
+    std::cout << "Total number of points: " << nPoints << std::endl;
+    std::cout << "Number of points inside the circle: " << nInside << std::endl;
     
     double my_pi = (double)4 * ((double)nInside/nPoints);
     
-    std::cout << my_pi << ':' << M_PI << std::endl;
-    std::cout << (M_PI/my_pi) * 100 << std::endl;
+    std::cout << "Computed PI: " << my_pi << std::endl << "PI: " << M_PI << std::endl;
+    
+    std::cout << "Accuracy: " << M_PI/my_pi * 100 << "%" <<std::endl;
 }
