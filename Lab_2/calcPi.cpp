@@ -19,14 +19,14 @@ void calculatePi() {
     {
         tid = omp_get_thread_num();
         
-        int start = tid * (nPoints / nthreads);
-        int end = (tid + 1) * (nPoints / nthreads);
+        int start = tid * (nPoints / nthreads); // Start point using the Load
+        int end = (tid + 1) * (nPoints / nthreads); // End point using the the Load + 1
         
         for (int i = start; i < end; i++) {
             rand_x = (double)(rand() % 100)/ 100.00;
             rand_y = (double)(rand() % 100)/ 100.00;
             
-            if (pow(rand_x, 2) +  pow(rand_y, 2) <= 1)
+            if (pow(rand_x, 2) +  pow(rand_y, 2) <= 1) // Using Pythagorus' Therom
                 nInside++;
         }
     }
